@@ -1,0 +1,105 @@
+/* 全局樣式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #faf7f5;
+    color: #4b4237;
+    line-height: 1.6;
+  }
+  
+  /* 頁首樣式 */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #bfa38f;
+    padding: 1rem;
+    color: white;
+  }
+  
+  .header .logo img {
+    height: 50px;
+  }
+  
+  .header .home-link {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+  }
+  
+  /* 主內容樣式 */
+  .about-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-intro, .about-mission, .about-team, .about-contact {
+    margin-bottom: 2rem;
+  }
+  
+  h1, h2 {
+    color: #b35b52;
+    text-align: center;
+  }
+  
+  p {
+    text-align: justify;
+  }
+  
+  /* 團隊成員樣式 */
+  .team-members {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+  }
+  
+  .team-member {
+    text-align: center;
+  }
+  
+  .team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* 聯絡方式樣式 */
+  .about-contact a {
+    color: #b35b52;
+    text-decoration: none;
+  }
+  
+  .about-contact a:hover {
+    text-decoration: underline;
+  }
+  
+  /* 頁尾樣式 */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #bfa38f;
+    color: white;
+    margin-top: 2rem;
+  }
+  /* 圖片置中樣式 */
+.top-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  
+  .top-banner img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+  

@@ -1,0 +1,78 @@
+/* -------------------------
+       1) 重置與基礎設定
+    ------------------------- */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html, body {
+        font-family: Georgia, serif;
+        background-color: #faf7f5; /* 淺色背景 */
+        color: #4B4237;
+        line-height: 1.5;
+        height: 100%; /* 讓body有高度 */
+      }
+  
+      /* -------------------------
+         2) Demo: 讓視窗置中
+      ------------------------- */
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+      }
+  
+      /* -------------------------
+         3) 成功視窗容器
+      ------------------------- */
+      .success-container {
+        position: relative; /* 讓關閉按鈕可定位 */
+        max-width: 350px;   /* 視需求可調整 */
+        background-color: #fff;
+        border: 1px solid #eee;
+        border-radius: 10px; /* 圓角 */
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        padding: 1.5rem;
+        text-align: center; /* 置中文字 */
+      }
+  
+      /* 標題區 (註冊成功) */
+      .success-container h2 {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+      }
+  
+      /* 關閉按鈕 (X) */
+      .close-btn {
+        position: absolute;
+        top: 0.75rem;
+        right: 0.75rem;
+        font-size: 1rem;
+        cursor: pointer;
+        color: #4B4237;
+      }
+  
+      /* 文字說明 */
+      .success-container p {
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+      }
+  
+      /* 立即登入按鈕 */
+      .login-button {
+        display: inline-block;
+        background-color: #f0b68c; /* 橘系 */
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        padding: 0.6rem 1.2rem;
+        font-size: 1rem;
+        cursor: pointer;
+        font-family: inherit;
+      }
+      .login-button:hover {
+        background-color: #e3a97f;
+      }

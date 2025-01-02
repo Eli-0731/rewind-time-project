@@ -1,0 +1,170 @@
+/* ----------------------------
+       1) 重置 + 基本字體設定
+    ---------------------------- */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html, body {
+        font-family: Georgia, serif;
+        background-color: #F7F5F0; /* 淺色背景 */
+        color: #4B4237;
+        line-height: 1.5;
+      }
+  
+      /* ----------------------------
+         2) Header 區域
+      ---------------------------- */
+      .checkout-header {
+        background-color: #D4A8A1; /* 玫瑰粉 */
+        padding: 1rem;
+        text-align: center;
+        color: #fff;
+        border-bottom: 1px solid #b0937b;
+      }
+      .checkout-header h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+      .breadcrumb a {
+        color: #fff;
+        text-decoration: none;
+      }
+      .breadcrumb span {
+        color: #fff;
+        font-weight: bold;
+      }
+  
+      /* ----------------------------
+         3) 主容器
+      ---------------------------- */
+      .checkout-container {
+        max-width: 480px; /* 協助RWD並置中 */
+        margin: 1rem auto;
+        background-color: #FFF;
+        border: 1px solid #eee;
+        border-radius: 6px;
+        padding: 1rem;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      }
+  
+      /* 區塊標題 */
+      .section-title {
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        color: #4B4237;
+      }
+  
+      /* ----------------------------
+         4) 運送方式
+      ---------------------------- */
+      .shipping-method, .payment-method {
+        border: 1px solid #b0937b;
+        padding: 0.5rem;
+        border-radius: 4px;
+        margin-bottom: 1rem;
+      }
+      .shipping-method legend, .payment-method legend {
+        font-weight: bold;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        color: #4B4237;
+        padding: 0 0.2rem; /* 美觀 */
+      }
+      .shipping-method label, .payment-method label {
+        display: block;
+        margin-bottom: 0.5rem;
+        cursor: pointer;
+      }
+      .shipping-method input[type="radio"], .payment-method input[type="radio"] {
+        margin-right: 0.5rem;
+      }
+  
+      /* ----------------------------
+         5) 收件/取貨表單
+      ---------------------------- */
+      .address-form {
+        margin-bottom: 1rem; 
+      }
+      .address-form h3 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+        color: #4B4237;
+      }
+      .form-row {
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+      .form-row input, .form-row select {
+        flex: 1;
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-family: inherit;
+      }
+      .full-width {
+        flex: 1 1 100%; /* 讓該欄位佔整行 */
+      }
+  
+      /* ----------------------------
+         6) 立即下單按鈕
+      ---------------------------- */
+      .order-button {
+        display: block;
+        width: 100%;
+        background-color: #a9c9a6; /* 淡綠 */
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        padding: 0.8rem;
+        font-size: 1.1rem;
+        cursor: pointer;
+        text-align: center;
+        font-family: inherit;
+        margin-bottom: 1rem;
+      }
+      .order-button:hover {
+        background-color: #98b996; /* hover更深 */
+      }
+  
+      /* ----------------------------
+         7) Footer
+      ---------------------------- */
+      .checkout-footer {
+        background-color: #D4A8A1;
+        text-align: center;
+        padding: 1rem;
+        color: #fff;
+      }
+      .contact-button {
+        background-color: #fff;
+        color: #D4A8A1;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        font-size: 1rem;
+        font-family: inherit;
+      }
+      .contact-button:hover {
+        background-color: #f2f2f2;
+      }
+  
+      /* ----------------------------
+         8) RWD示範
+      ---------------------------- */
+      @media (max-width: 480px) {
+        .checkout-container {
+          margin: 0.5rem;
+          padding: 1rem;
+        }
+        .form-row {
+          flex-direction: column;
+        }
+      }
+  

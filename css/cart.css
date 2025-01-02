@@ -1,0 +1,379 @@
+/* ----------------------------
+   1) 重置 (Reset)
+---------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* ----------------------------
+     2) 全局基礎設定 (Body)
+  ---------------------------- */
+  /* 使用襯線字體 + 復古色系背景，字色深棕 */
+  body {
+    font-family: Georgia, serif;
+    background-color: #FAF7F5; /* 淡舊紙背景 */
+    color: #4b4237;           /* 深棕色文字 */
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* ----------------------------
+     3) Header (示意)
+  ---------------------------- */
+  .header {
+    background-color: #bfa38f; /* 較柔和的棕粉 */
+    padding: 0.8rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff5ed;
+    border-bottom: 3px solid #b0937b; /* 仿舊書封面邊線 */
+  }
+  
+  .header-left, .header-right {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-icons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-icons span{
+    margin-left: 1rem;
+    cursor: pointer;
+    font-size: 1.3rem;
+  }
+  
+  .header-icons img {
+    width: 1.3rem; /* 圖片寬度 */
+    height: 1.3rem; /* 圖片高度 */
+    object-fit: cover; /* 保持內容比例 */
+    margin-left: 1rem; /* 與 icon 間距 */
+  }
+  
+  /* Logo 區塊 */
+  .logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    align-items: center;
+    gap: 0.5rem;
+    display: flex;
+  }
+  .logo a {
+    text-decoration: none;
+    color: #fff; /* 如需文字Logo，維持白色 */
+  }
+  /* 縮小 Logo 圖片 */
+  .logo img {
+    width: 80px;    /* 調整此值以縮放圖片 */
+    height: auto;
+    object-fit: contain;
+  }
+  
+  .header-icons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-icons span{
+    margin-left: 1rem;
+    cursor: pointer;
+    font-size: 1.3rem;
+  }
+  
+  .header-icons img {
+    width: 1.3rem; /* 圖片寬度 */
+    height: 1.3rem; /* 圖片高度 */
+    object-fit: cover; /* 保持內容比例 */
+    margin-left: 1rem; /* 與 icon 間距 */
+  }
+  
+  /* 漢堡選單 (三條線) */
+  .menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+  .menu-icon span {
+    display: block;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+  }
+  
+  /* 包含漢堡選單和下拉選單的容器 */
+  .menu-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  /* 下拉選單 */
+  .dropdown-list {
+    display: none; /* 預設隱藏 */
+    position: absolute;
+    left: 30px; /* 下拉選單距離漢堡選單的距離 */
+    top: 0;
+    background-color: #f2efec;
+    list-style: none;
+    border: 1px solid #f2efec;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1000;
+    min-width: 150px;
+  }
+  
+  .dropdown-list li {
+    text-align: left;
+    padding: 10px 20px;
+    border-bottom: 1px solid #f2efec;
+    color: black;
+    display: block;
+    white-space: normal;
+  }
+  
+  .dropdown-list li:last-child {
+    border-bottom: none;
+  }
+  
+  .dropdown-list li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+  }
+  
+  .dropdown-list li:hover {
+    background-color: #f5e7d9;
+    text-decoration: dashed;
+  }
+
+  main {
+    padding: 1rem;
+    flex-grow: 1;
+  }
+  /* -----------------------
+    3) 搜尋欄
+  ----------------------- */
+  .search-bar {
+    display: flex;
+    max-width: 450px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .search-bar input {
+    flex: 1;
+    border: none;
+    padding: 0.5rem;
+    outline: none;
+    font-family: inherit;
+    font-size: 1rem;
+  }
+  .search-bar button {
+    background-color: transparent;
+    border: none;
+    padding: 0 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* ----------------------------
+     5) 主容器：結帳/購物車
+  ---------------------------- */
+  .checkout-container {
+    max-width: 800px;
+    margin: 1rem auto;
+    background-color: #f5f1e1; /* 舊紙張色 */
+    border-radius: 6px;
+    padding: 1rem;
+    border: 1px solid #b0937b;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* 淡淡陰影 */
+  }
+  .checkout-container h2 {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: #4b4237;
+  }
+  
+  /* 商品列表 cart-items */
+  .cart-items {
+    border-bottom: 1px solid #b0937b;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* ----------------------------
+     6) 單一商品 cart-item
+  ---------------------------- */
+  .cart-item {
+    display: flex;
+    padding: 0.8rem 0;
+    border-top: 1px solid #e8e1d9;
+    align-items: center;
+  }
+  .cart-item:first-child {
+    border-top: none; /* 第一個商品不顯示頂部邊線 */
+  }
+  
+  /* 商品圖片 */
+  .item-image img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  /* 文字區 */
+  .item-details {
+    margin-left: 1rem;
+    flex: 1;
+  }
+  .item-name {
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+    color: #4b4237;
+  }
+  .item-style,
+  .item-price {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.2rem;
+  }
+  
+  /* 數量調整區 */
+  .quantity-controller {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+  }
+  .qty-btn {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .qty-input {
+    width: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    margin: 0 0.2rem;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background-color: #fff;
+  }
+  
+  /* 商品右側 (小計+刪除) */
+  .cart-item-actions button {
+    background-color: #e57373;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  
+  
+  /* ----------------------------
+     7) 小計與結帳 cart-summary
+  ---------------------------- */
+  .cart-summary {
+    text-align: right;
+    padding-top: 0.5rem;
+  }
+  .summary-item {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .summary-item.total {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #4b4237;
+  }
+  .checkout-btn {
+    display: inline-block;
+    background-color: #aeb9a3; /* 帶點淡綠的復古色 */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.8rem 1.5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: inherit;
+  }
+  .checkout-btn:hover {
+    background-color: #9aa88e;
+  }
+  
+  /* ----------------------------
+     8) 頁尾 (示意)
+  ---------------------------- */
+  footer {
+    background-color: #bfa38f;
+    text-align: left;
+    padding: 10px 50px;
+    color: #fff;
+    margin-top: 1rem;
+    position: relative;
+  }
+  
+  .reserved {
+    text-align: center;
+  }
+  
+  /* ----------------------------
+     9) RWD 響應式 (小螢幕)
+  ---------------------------- */
+  @media (max-width: 768px) {
+    .cart-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .item-details {
+      margin-left: 0;
+      margin-top: 0.5rem;
+    }
+    .item-right {
+      margin-top: 0.5rem;
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .item-total {
+      margin-bottom: 0;
+    }
+    .checkout-container {
+      margin: 0.5rem;
+      padding: 1rem;
+    }
+    .search-bar {
+      flex-direction: column;
+    }
+    .search-bar button {
+      width: 100%;
+      border-radius: 0 0 4px 4px;
+      margin-left: 0;
+      margin-top: 0.3rem;
+    }
+  }
+  

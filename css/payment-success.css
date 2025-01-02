@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    text-align: center;
+    padding: 50px;
+}
+
+.success-icon {
+    font-size: 100px;
+    color: #c6958e;
+    margin-bottom: 20px;
+}
+
+.message {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.order-details {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.button {
+    padding: 15px 30px;
+    font-size: 18px;
+    color: white;
+    background-color: #c6958e;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #c6958e;
+}

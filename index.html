@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>期末專案 - 首頁</title>
+  <style>
+    @import url("./css/index.css");
+  </style>
+</head>
+<body>
+  
+  
+  <header class="header">
+    <div class="header-left">
+      <!-- 漢堡選單 -->
+      <div class="menu-container">
+        <div class="menu-icon"  id="menuIcon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="dropdown-list" id="dropdownList">
+          <li><a href="camera.html">底片相機</a></li>
+          <li><a href="dress.html">上衣</a></li>
+          <li><a href="pants.html">褲子</a></li>
+          <li><a href="accessories.html">飾品</a></li>
+          <li><a href="introduction-members.html">關於我們</a></li>
+        </ul>
+      </div>
+
+      <!-- Logo -->
+      <div class="logo">
+        <a href="index.html">
+        <img src="image/camera logo remove background.jpg" alt="RetroCam Logo" />
+        </a>
+      </div>
+    </div>
+
+    <div class="header-right">
+      <!-- 購物車圖示 -->
+      <div class="header-icons">
+        <a href="cart.html">
+        <span class="cart-icon">🛒</span>
+        </a>
+        <!-- 會員登入連結 -->
+        <a href="login.html" class="login-link">
+          <img src="image/member login.png" alt="會員登入">
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div id="notification" class="notification">商品已加入購物車！</div>
+
+
+  <main>
+    
+    <!-- 搜尋欄 -->
+    <div class="search-bar">
+      <input type="text" placeholder="搜尋關鍵字">
+      <button>🔍</button>
+    </div>
+    <div class="custom-carousel">
+      <div class="carousel-track">
+        <div class="carousel-slide">
+          <img src="image/adpicture1.png" alt="廣告1">
+          <p class="carousel-caption"></p>
+        </div>
+        <div class="carousel-slide">
+          <img src="image/adpicture2.png" alt="廣告2">
+          <p class="carousel-caption"></p>
+        </div>
+        <div class="carousel-slide">
+          <img src="image/adpicture3.png" alt="廣告3">
+          <p class="carousel-caption"></p>
+        </div>
+        <div class="carousel-slide">
+          <img src="image/adpicture4.png" alt="廣告4">
+          <p class="carousel-caption"></p>
+        </div>
+      </div>
+      <div class="carousel-indicators">
+        <span class="indicator" data-slide="0"></span>
+        <span class="indicator" data-slide="1"></span>
+        <span class="indicator" data-slide="2"></span>
+        <span class="indicator" data-slide="3"></span>
+      </div>
+    </div>
+    
+    
+    
+    <!-- 推薦商品區 -->
+    <section class="recommend-products">
+      <h2>推薦商品</h2>
+      <div class="product-list">
+        
+        <!-- 商品卡 1：白色 Ektar H35 -->
+        <div id="cart-notification" class="cart-notification" style="display: none;">
+          商品已加入購物車！
+        </div>
+        <div 
+          class="product-card" 
+          data-id="p101"
+          data-name="白色 Ektar H35 底片相機"
+          data-price="3500"
+          data-image="image/camera1.jpg">
+          <a href="interface.html" class="interface-link">
+            <img src="image/camera1.jpg" alt="白色 Ektar H35 底片相機">
+          </a>
+          <p class="product-desc">
+            <strong>白色 Ektar H35 底片相機</strong><br>
+          </p>
+          <p class="product-price">價格：NT$3500</p>
+          <button class="add-to-cart">加入購物車</button>
+        </div>
+
+        <!-- 商品卡 2：棕色 Ektar H35 -->
+        <div 
+          class="product-card"
+          data-id="p102"
+          data-name="棕色 Ektar H35 底片相機"
+          data-price="1600">
+          <a href="interface-two.html" class="interface-link">
+            <img src="image/camera2.jpg" alt="棕色 Ektar H35 底片相機">
+          </a>
+          <p class="product-desc">
+            <strong>棕色 Ektar H35 底片相機</strong><br>
+          </p>
+          <p class="product-price">價格：NT$3600</p>
+          <button class="add-to-cart">加入購物車</button>
+        </div>
+
+        <!-- 商品卡 3：黑色 Ektar H35 -->
+        <div 
+          class="product-card"
+          data-id="p103"
+          data-name="黑色 Ektar H35 底片相機"
+          data-price="1700">
+          <a href="interface-three.html" class="interface-link">
+            <img src="image/camera3.jpg" alt="黑色 Ektar H35 底片相機">
+          </a>
+          <p class="product-desc">
+            <strong>黑色 Ektar H35 底片相機</strong><br>
+          </p>
+          <p class="product-price">價格：NT$3200</p>
+          <button class="add-to-cart">加入購物車</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 全套商品搭配 (範例) -->
+    <section class="bundle-products">
+      <h2>服飾類商品</h2>
+      <div class="product-list">
+        <div class="product-card" data-id="set1" data-name="ROCKS大學T" data-price="550">
+          <a href="interface-four.html" class="interface-link">
+            <img src="image/大學T.png" alt="ROCKS大學T">
+          </a>
+          <p class="product-desc">
+            <strong>ROCKS大學T</strong><br>
+          </p>
+          <p class="product-price">價格：NT$550</p>
+          <button class="add-to-cart">加入購物車</button>
+        </div>
+        <div class="product-card" data-id="set2" data-name="毛衣" data-price="590">
+          <a href="interface-five.html" class="interface-link">
+            <img src="image/毛衣.png" alt="毛衣">
+          </a>
+          <p class="product-desc">
+            <strong>毛衣</strong><br>
+          </p>
+          <p class="product-price">價格：NT$590</p>
+          <button class="add-to-cart">加入購物車</button>
+        </div>
+        <div class="product-card" data-id="set3" data-name="老鷹大學T" data-price="550">
+          <a href="interface-six.html" class="interface-link">
+            <img src="image/老鷹大學T.png" alt="老鷹大學T">
+          </a>
+          <p class="product-desc">
+            <strong>老鷹大學T</strong><br>
+          </p>
+          <p class="product-price">價格：NT$550</p>
+          <button class="add-to-cart">加入購物車</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="bundle-products">
+      <h2>褲類商品</h2>
+      <div class="product-list">
+        <div class="product-card" data-id="set1" data-name="白漆刷舊牛仔喇叭褲" data-price="850">
+          <a href="interface-seven.html" class="interface-link">
+            <img src="image/白漆刷舊牛仔喇叭褲.png" alt="白漆刷舊牛仔喇叭褲">
+          </a>
+          <p class="product-desc">
+            <strong>白漆刷舊牛仔喇叭褲</strong><br>
+          </p>
+          <p class="product-price">價格：NT$850</p>
+          <button class="add-to-cart">加入購物車</button>
+        </div>
+        <div class="product-card" data-id="set2" data-name="白霧繚繞抽繩牛仔褲" data-price="790">
+          <a href="interface-eight.html" class="interface-link">
+            <img src="image/白霧繚繞抽繩牛仔褲.png" alt="白霧繚繞抽繩牛仔褲">
+          </a>
+          <p class="product-desc">
+            <strong>白霧繚繞抽繩牛仔褲</strong><br>
+          </p>
+          <p class="product-price">價格：NT$790</p>
+          <button class="add-to-cart">加入購物車</button>
+        </div>
+        <div class="product-card" data-id="set3" data-name="刷舊感工裝牛仔褲" data-price="990">
+          <a href="interface-nine.html" class="interface-link">
+            <img src="image/刷舊感工裝牛仔褲.png" alt="刷舊感工裝牛仔褲">
+          </a>
+          <p class="product-desc">
+            <strong>刷舊感工裝牛仔褲</strong><br>
+          </p>
+          <p class="product-price">價格：NT$990</p>
+          <button class="add-to-cart">加入購物車</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <h3>ABOUT US</h3>
+    <p>在這裡，一起來場跨越時空的旅程，撥動時光的旋鈕，讓懷舊的旋律再起響起，讓舊時光的溫暖重回眼前。
+      時光不會重來，但故事能夠重現，讓我們一起倒帶時光，找回那些被遺忘的美好片段吧!
+    </p><hr>
+    <p class="reserved">Rewind Time 2024 reserved</p>
+  </footer>
+
+  <script src="js/dropdownList.js"></script>
+  <script src="js/products.js"></script>
+
+</body> 
+</html>

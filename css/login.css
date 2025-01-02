@@ -1,0 +1,227 @@
+ /* -----------------------
+       1) 重置/基礎設定
+    ----------------------- */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html, body {
+        font-family: Georgia, serif;
+        background-color: #FAF7F5; /* 淡色背景 */
+        color: #4B4237;
+        line-height: 1.5;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+  
+      /* -----------------------
+         2) Header
+      ----------------------- */
+      .header {
+        background-color: #bfa38f; 
+        color: #fff;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .header-left, .header-right {
+        display: flex;
+        align-items: center;
+      }
+      
+      /* Logo 區塊 */
+      .logo {
+        font-weight: bold;
+        font-size: 1.2rem;
+        align-items: center;
+        gap: 0.5rem;
+        display: flex;
+      }
+      .logo a {
+        text-decoration: none;
+        color: #fff; /* 如需文字Logo，維持白色 */
+      }
+      /* 縮小 Logo 圖片 */
+      .logo img {
+        width: 80px;    /* 調整此值以縮放圖片 */
+        height: auto;
+        object-fit: contain;
+      }
+      
+      .header-icons {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      
+      .header-icons img:last-child {
+        position: relative;
+        top: -4px; /* 向上微調 */
+        width: 2.2rem; /* 縮小頭像 */
+        height: 2.2rem;
+        object-fit: cover;
+        border-radius: 50%; /* 保持圓形 */
+      }
+      
+      /* 漢堡選單 (三條線) */
+      .menu-icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 24px;
+        height: 18px;
+        margin-right: 1rem;
+        cursor: pointer;
+      }
+      .menu-icon span {
+        display: block;
+        height: 3px;
+        background: #fff;
+        border-radius: 2px;
+      }
+      
+      /* 包含漢堡選單和下拉選單的容器 */
+      .menu-container {
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
+      
+      /* 下拉選單 */
+      .dropdown-list {
+        display: none; /* 預設隱藏 */
+        position: absolute;
+        left: 30px; /* 下拉選單距離漢堡選單的距離 */
+        top: 0;
+        background-color: #f2efec;
+        list-style: none;
+        border: 1px solid #f2efec;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        z-index: 1000;
+        min-width: 150px;
+      }
+      
+      .dropdown-list li {
+        text-align: left;
+        padding: 10px 20px;
+        border-bottom: 1px solid #f2efec;
+        color: black;
+        display: block;
+        white-space: normal;
+      }
+      
+      .dropdown-list li:last-child {
+        border-bottom: none;
+      }
+      
+      .dropdown-list li a {
+        text-decoration: none;
+        color: black;
+        display: block;
+      }
+      
+      .dropdown-list li:hover {
+        background-color: #f5e7d9;
+        text-decoration: dashed;
+      }
+      
+        /* 4) 主內容：登入區
+      ----------------------- */
+      main {
+        padding: 1rem;
+        flex-grow: 1;
+      }
+      .login-container {
+        max-width: 450px;
+        margin: 1rem auto;
+        background-color: #fff;
+        border: 1px solid #eee;
+        border-radius: 6px;
+        padding: 1.5rem;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      }
+      .login-container h2 {
+        text-align: center;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        font-weight: bold;
+      }
+      /* 表單欄位 */
+      .form-row {
+        margin-bottom: 1rem;
+      }
+      .form-row input {
+        width: 100%;
+        padding: 0.7rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-family: inherit;
+        font-size: 1rem;
+        outline: none;
+      }
+      /* 登入按鈕 */
+      .login-btn {
+        display: block;
+        width: 100%;
+        background-color: #f0b68c; /* 淡橘 */
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        padding: 0.8rem;
+        font-size: 1rem;
+        cursor: pointer;
+        text-align: center;
+        font-family: inherit;
+        margin-bottom: 0.5rem;
+        text-decoration: none;
+      }
+      .login-btn:hover {
+        background-color: #e3a97f;
+      }
+
+      /* 忘記密碼 */
+      .forgot-pwd {
+        text-align: center;
+        font-size: 0.9rem;
+        color: #666;
+      }
+      .forgot-pwd a {
+        color: #4b4237;
+        text-decoration: none;
+      }
+      .forgot-pwd a:hover {
+        text-decoration: underline;
+      }
+  
+      /* -----------------------
+         5) Footer
+      ----------------------- */
+      footer {
+        background-color: #c6958e;
+        text-align: left;
+        padding: 10px 50px;
+        color: #fff;
+        margin-top: 1rem;
+        position: relative;
+      }
+      
+      .reserved {
+        text-align: center;
+      }
+  
+      /* -----------------------
+         6) RWD - 小螢幕
+      ----------------------- */
+      @media (max-width: 480px) {
+        .login-container {
+          margin: 0.5rem;
+          padding: 1rem;
+        }
+        .logo img {
+          width: 60px; /* 手機時可進一步縮小 */
+        }
+      }

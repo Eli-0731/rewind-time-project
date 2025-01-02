@@ -1,0 +1,299 @@
+
+.header {
+    background-color: #bfa38f; /* 原先 #d4a8a1，稍微降低粉感、增添深度 */
+    padding: 1rem 1.5rem;      /* 左右加大些讓內容更寬鬆 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+  }
+  
+  .header-left, .header-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Logo 區塊 */
+  .logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    align-items: center;
+    gap: 0.5rem;
+    display: flex;
+  }
+  .logo a {
+    text-decoration: none;
+    color: #fff; /* 如需文字Logo，維持白色 */
+  }
+  /* 縮小 Logo 圖片 */
+  .logo img {
+    width: 80px;    /* 調整此值以縮放圖片 */
+    height: auto;
+    object-fit: contain;
+  }
+  
+  .header-icons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-icons span{
+    margin-left: 1rem;
+    cursor: pointer;
+    font-size: 1.3rem;
+  }
+  
+  .header-icons img {
+    width: 1.3rem; /* 圖片寬度 */
+    height: 1.3rem; /* 圖片高度 */
+    object-fit: cover; /* 保持內容比例 */
+    margin-left: 1rem; /* 與 icon 間距 */
+  }
+  
+  .notification {
+    position: fixed;
+    top: -50px; /* 起始位置：隱藏在螢幕上方 */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #E9967A; 
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease; /* 進出場動畫 */
+    opacity: 0; /* 初始透明度 */
+  }
+  
+  .notification.visible {
+    top: 20px; /* 顯示位置：距螢幕頂部 20px */
+    opacity: 1; /* 全可見 */
+  }
+  
+  /* 漢堡選單 (三條線) */
+  .menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+  .menu-icon span {
+    display: block;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+  }
+  
+  /* 包含漢堡選單和下拉選單的容器 */
+  .menu-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  /* 下拉選單 */
+  .dropdown-list {
+    display: none; /* 預設隱藏 */
+    position: absolute;
+    left: 30px; /* 下拉選單距離漢堡選單的距離 */
+    top: 0;
+    background-color: #f2efec;
+    list-style: none;
+    border: 1px solid #f2efec;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1000;
+    min-width: 150px;
+  }
+  
+  .dropdown-list li {
+    text-align: left;
+    padding: 10px 20px;
+    border-bottom: 1px solid #f2efec;
+    color: black;
+    display: block;
+    white-space: normal;
+  }
+  
+  .dropdown-list li:last-child {
+    border-bottom: none;
+  }
+  
+  .dropdown-list li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+  }
+  
+  .dropdown-list li:hover {
+    background-color: #f5e7d9;
+    text-decoration: dashed;
+  }
+  
+  /* -----------------------
+    3) 搜尋欄
+  ----------------------- */
+  .search-bar {
+    display: flex;
+    max-width: 450px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .search-bar input {
+    flex: 1;
+    border: none;
+    padding: 0.5rem;
+    outline: none;
+    font-family: inherit;
+    font-size: 1rem;
+  }
+  .search-bar button {
+    background-color: transparent;
+    border: none;
+    padding: 0 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* ----------------------------
+     區域標題 (section h2)
+  ----------------------------- */
+  section {
+    margin: 1rem 1.5rem; /* 左右留更大空間 */
+  }
+  
+  section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+    font-weight: bold;
+    color: #444; /* 與底色呼應 */
+  }
+  
+  /* ----------------------------
+     商品列表 與 商品卡片
+  ----------------------------- */
+  .product-list {
+    display: flex;
+    flex-wrap: wrap; /* 畫面不足會自動換行 */
+    gap: 1rem;
+    justify-content: flex-start; 
+  }
+  
+  /* 整體卡片大小與外觀 */
+  .product-card {
+    background-color: #ececec;
+    width: 300px; /* 原180 -> 200 加大一些 */
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    flex: 1 1 calc(33.33% - 1rem);
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto; /* 自動推動圖片向右 */
+    margin-right: auto; /* 保持居中對齊 */
+    display: block; /* 確保圖片獨占一行 */
+  }
+  
+  /* 卡片懸浮陰影 */
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* 商品卡片內圖片 */
+  .product-card img {
+    width: 100%; /* 圖片自適應寬度 */
+    height: 350px; /* 限制圖片高度，避免過大 */
+    object-fit: cover;
+    display: block;
+    text-align: center; /* 讓內容居中 */
+     /* 增加內邊距向右偏移 */
+  }
+  
+  
+  .product-card img:hover {
+    transform: scale(1.08); /* 滑鼠懸停放大 */
+  }
+  
+  /* 商品描述 (若有使用 .product-desc) */
+  .product-desc {
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.4;
+    text-align: left;
+  }
+  
+  .product-price {
+    padding: 0 1rem; /* 與 product-desc 保持一致 */
+    font-size: 1rem; /* 價格字體可以略大些 */
+    color: #c6958e; /* 使用一個顯眼的顏色，突出價格 */
+    font-weight: bold; /* 強調價格 */
+    text-align: left;
+    margin-top: 0.5rem; /* 與描述間距 */
+  }
+  
+  /* 加入購物車按鈕 */
+  .add-to-cart {
+    display: inline-block;
+    background-color: #c6958e;
+    color: #fff;
+    width: auto;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1.2rem;
+    margin: 0.5rem 0;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .add-to-cart:hover {
+    background-color: #b2847c; /* hover時再深一點 */
+  }
+  
+  /* ----------------------------
+     Footer (頁尾)
+  ----------------------------- */
+  footer {
+    background-color: #bfa38f;
+    text-align: left;
+    padding: 10px 50px;
+    color: #fff;
+    margin-top: 1rem;
+  }
+  
+  .reserved {
+    text-align: center;
+  }
+  
+  /* ----------------------------
+     RWD 響應式 (小螢幕)
+  ----------------------------- */
+  @media (max-width: 768px) {
+    /* 搜尋欄在小螢幕寬度縮小 */
+    .search-bar input {
+      width: 60%;
+    }
+  
+    /* 商品卡片排成單欄或雙欄 */
+    .product-list {
+      justify-content: center;
+    }
+    .product-card {
+      width: 80%;
+      max-width: 300px; 
+    }
+  }

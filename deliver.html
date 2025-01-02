@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>選擇送達方式</title>
+  <style>
+    @import url("css/deliver.css");
+  </style>
+</head>
+<body>
+
+<div class="delivery-options-container">
+  <h1>請選擇送達方式</h1>
+  
+  <div class="delivery-option" onclick="selectDeliveryMethod('宅配')">
+    <span>宅配</span>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M20 8H17V6c0-1.1-.9-2-2-2H9C7.9 4 7 4.9 7 6v2H4C2.9 8 2 8.9 2 10v8c0 1.1.9 2 2 2h3c0 1.1.9 2 2 2s2-.9 2-2h4c0 1.1.9 2 2 2s2-.9 2-2h3c1.1 0 2-.9 2-2v-8c0-1.1-.9-2-2-2zM9 6h6v2H9V6zm-5 4h16v3H4v-3zm0 8v-3h4v3H4zm6 0v-3h4v3h-4zm6 0v-3h4v3h-4z"/>
+    </svg>
+  </div>
+
+  <div class="delivery-option" onclick="selectDeliveryMethod('7-ELEVEN取貨')">
+    <span>7-ELEVEN取貨</span>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M21 8H3c-1.1 0-2 .9-2 2v7c0 1.1.9 2 2 2h4v-2H3v-7h18v7h-4v2h4c1.1 0 2-.9 2-2v-7c0-1.1-.9-2-2-2zm-5 10H8v2h8v-2zm-3-9h-4V6h4v3z"/>
+    </svg>
+  </div>
+</div>
+
+<script>
+  function selectDeliveryMethod(method) {
+    alert(`你選擇了 ${method}`);
+    // 在這裡可根據選擇導向不同頁面
+    if (method === '宅配') {
+        window.location.href = "checkout.html";
+    } else if (method === '7-ELEVEN取貨') {
+        window.location.href = "checkout-two.html";
+    }
+  }
+</script>
+
+</body>
+</html>

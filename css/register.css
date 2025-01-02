@@ -1,0 +1,241 @@
+/* -----------------------
+   1) 重置/基礎設定
+----------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html, body {
+    font-family: Georgia, serif;
+    background-color: #FAF7F5; /* 與設計示意相近 */
+    color: #4B4237;
+    line-height: 1.5;
+    display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+  }
+  
+  /* -----------------------
+     2) Header
+  ----------------------- */
+  .header {
+    background-color: #bfa38f;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header-left, .header-right {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-icons img:last-child {
+    position: relative;
+    top: -4px; /* 調整這裡的值控制位移 */
+  }
+  
+  /* Logo 區塊 */
+  .logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    align-items: center;
+    gap: 0.5rem;
+    display: flex;
+  }
+  .logo a {
+    text-decoration: none;
+    color: #fff; /* 如需文字Logo，維持白色 */
+  }
+  /* 縮小 Logo 圖片 */
+  .logo img {
+    width: 80px;    /* 調整此值以縮放圖片 */
+    height: auto;
+    object-fit: contain;
+  }
+  
+  .header-icons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-icons span{
+    margin-left: 1rem;
+    cursor: pointer;
+    font-size: 1.3rem;
+  }
+  
+  .header-icons img {
+    width: 1.3rem; /* 圖片寬度 */
+    height: 1.3rem; /* 圖片高度 */
+    object-fit: cover; /* 保持內容比例 */
+    margin-left: 1rem; /* 與 icon 間距 */
+  }
+  
+  /* 漢堡選單 (三條線) */
+  .menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+  .menu-icon span {
+    display: block;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+  }
+  
+  /* 包含漢堡選單和下拉選單的容器 */
+  .menu-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  /* 下拉選單 */
+  .dropdown-list {
+    display: none; /* 預設隱藏 */
+    position: absolute;
+    left: 30px; /* 下拉選單距離漢堡選單的距離 */
+    top: 0;
+    background-color: #f2efec;
+    list-style: none;
+    border: 1px solid #f2efec;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1000;
+    min-width: 150px;
+  }
+  
+  .dropdown-list li {
+    text-align: left;
+    padding: 10px 20px;
+    border-bottom: 1px solid #f2efec;
+    color: black;
+    display: block;
+    white-space: normal;
+  }
+  
+  .dropdown-list li:last-child {
+    border-bottom: none;
+  }
+  
+  .dropdown-list li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+  }
+  
+  .dropdown-list li:hover {
+    background-color: #f5e7d9;
+    text-decoration: dashed;
+  }
+  
+  
+  /* -----------------------
+     4) 主內容：註冊帳號
+  ----------------------- */
+  main {
+    padding: 1rem;
+    flex-grow: 1;
+  }
+  .register-section {
+    max-width: 450px;
+    margin: 1rem auto;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  .register-section h2 {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+  .register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .register-form input {
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+  }
+  .hint {
+    font-size: 0.85rem;
+    color: #666;
+    text-align: center;
+    margin-top: -0.5rem;
+  }
+  .register-button {
+    display: block;
+    width: 100%;
+    background-color: #f0b68c; /* 橘色系 */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.8rem;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    font-family: inherit;
+  }
+  .register-button:hover {
+    background-color: #e3a97f;
+  }
+  
+  /* 已是會員？立即登入 */
+  .login-link {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+  }
+  .login-link a {
+    color: #4b4237;
+    text-decoration: none;
+  }
+  .login-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* -----------------------
+     5) Footer
+  ----------------------- */
+  footer {
+    background-color: #c6958e;
+    text-align: left;
+    padding: 10px 50px;
+    color: #fff;
+    margin-top: 1rem;
+    position: relative;
+  }
+  
+  .reserved {
+    text-align: center;
+  }
+  
+  /* -----------------------
+     6) RWD - 小螢幕
+  ----------------------- */
+  @media (max-width: 480px) {
+    .register-section {
+      margin: 0.5rem;
+      padding: 1rem;
+    }
+    .logo img {
+      width: 60px; /* 更小顯示於手機也可 */
+    }
+  }
+  

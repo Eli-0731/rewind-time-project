@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>購物車</title>
+  <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-left">
+      <!-- 漢堡選單 -->
+      <div class="menu-container">
+        <div class="menu-icon" id="menuIcon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="dropdown-list" id="dropdownList">
+          <li><a href="camera.html">底片相機</a></li>
+          <li><a href="dress.html">上衣</a></li>
+          <li><a href="pants.html">褲子</a></li>
+          <li><a href="accessories.html">飾品</a></li>
+        </ul>
+      </div>
+
+      <!-- Logo -->
+      <div class="logo">
+        <a href="index.html">
+          <img src="image/camera logo remove background.jpg" alt="RetroCam Logo">
+        </a>
+      </div>
+    </div>
+
+    <div class="header-right">
+      <!-- 購物車圖示 -->
+      <div class="header-icons">
+        <a href="cart.html">
+          <span class="cart-icon">🛒</span>
+        </a>
+        <!-- 會員登入連結 -->
+        <a href="login.html" class="login-link">
+          <img src="image/member login.png" alt="會員登入">
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 搜尋欄 -->
+    <div class="search-bar">
+      <input type="text" placeholder="搜尋關鍵字">
+      <button>🔍</button>
+    </div>
+
+    <!-- 購物車區 -->
+    <div class="checkout-container">
+      <h2>購物車</h2>
+      <div class="cart-items">
+        <!-- 由 cart.js 動態生成 -->
+      </div>
+    
+      <!-- 小計與結帳區 -->
+      <div class="cart-summary">
+        <div class="summary-item">
+          <span>小計:</span>
+          <span id="subtotal">$0</span>
+        </div>
+        <div class="summary-item total">
+          <span>總計:</span>
+          <span id="total">$0</span>
+        </div>
+        <a href="deliver.html">
+          <button class="checkout-btn">結帳</button>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <h3>ABOUT US</h3>
+    <p>在這裡，一起來場跨越時空的旅程，撥動時光的旋鈕，讓懷舊的旋律再起響起，讓舊時光的溫暖重回眼前。
+      時光不會重來，但故事能夠重現，讓我們一起倒帶時光，找回那些被遺忘的美好片段吧!
+    </p><hr>
+    <p class="reserved">Rewind Time 2024 reserved</p>
+  </footer>
+
+  <script src="js/dropdownList.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>

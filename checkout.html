@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>REWIND TIME - 結帳</title>
+  <style>
+    @import url("./css/checkout.css");
+  </style>
+</head>
+<body>
+
+  <!-- 簡化版 Header：只剩店名 -->
+  <header class="checkout-header">
+    <h1>REWIND TIME</h1>
+    <nav class="breadcrumb">
+      <a href="cart.html">購物車</a> | 
+      <span>結帳</span>
+    </nav>
+  </header>
+
+  <main class="checkout-container">
+    <h2 class="section-title">結帳</h2>
+
+    <!-- 運送方式區 -->
+    <fieldset class="shipping-method">
+      <legend>運送方式</legend>
+      <label>
+        <input type="radio" name="shippingType" value="宅配" checked>
+        宅配
+      </label>
+    </fieldset>
+
+    <!-- 收件/取貨表單 -->
+    <form class="address-form" action="#" method="post">
+      <!-- (1) 宅配資料 -->
+      <div class="home-delivery-fields">
+        <h3>收件地址</h3>
+        <div class="form-row">
+          <input type="text" placeholder="名字" required>
+          <input type="text" placeholder="姓氏" required>
+        </div>
+        <div class="form-row">
+          <input type="tel" placeholder="電話" required>
+        </div>
+        <div class="form-row">
+          <input type="email" placeholder="電子郵件" required>
+        </div>
+        <div class="form-row">
+          <input type="text" placeholder="國家" value="台灣" required>
+          <select required>
+            <option value="">選擇縣市</option>
+            <option>台北市</option>
+            <option>新北市</option>
+            <option>桃園市</option>
+            <!-- 其他縣市... -->
+          </select>
+        </div>
+        <div class="form-row">
+          <select required>
+            <option value="">鄉鎮市區</option>
+          
+            <!-- 台北市 -->
+            <optgroup label="台北市">
+              <option>中正區</option>
+              <option>大同區</option>
+              <option>中山區</option>
+              <option>松山區</option>
+              <option>大安區</option>
+              <option>萬華區</option>
+              <option>信義區</option>
+              <option>士林區</option>
+              <option>北投區</option>
+              <option>內湖區</option>
+              <option>南港區</option>
+              <option>文山區</option>
+            </optgroup>
+          
+            <!-- 新北市 -->
+            <optgroup label="新北市">
+              <option>板橋區</option>
+              <option>新莊區</option>
+              <option>中和區</option>
+              <option>永和區</option>
+              <option>土城區</option>
+              <option>樹林區</option>
+              <option>三峽區</option>
+              <option>鶯歌區</option>
+              <option>三重區</option>
+              <option>蘆洲區</option>
+              <option>五股區</option>
+              <option>泰山區</option>
+              <option>林口區</option>
+              <option>深坑區</option>
+              <option>石碇區</option>
+              <option>坪林區</option>
+              <option>烏來區</option>
+              <option>瑞芳區</option>
+              <option>貢寮區</option>
+              <option>雙溪區</option>
+              <option>平溪區</option>
+              <option>新店區</option>
+              <option>萬里區</option>
+              <option>金山區</option>
+              <option>石門區</option>
+              <option>三芝區</option>
+              <option>淡水區</option>
+              <option>八里區</option>
+            </optgroup>
+          
+            <!-- 桃園市 -->
+            <optgroup label="桃園市">
+              <option>桃園區</option>
+              <option>中壢區</option>
+              <option>平鎮區</option>
+              <option>八德區</option>
+              <option>楊梅區</option>
+              <option>蘆竹區</option>
+              <option>龜山區</option>
+              <option>龍潭區</option>
+              <option>大溪區</option>
+              <option>觀音區</option>
+              <option>新屋區</option>
+              <option>大園區</option>
+              <option>復興區</option>
+            </optgroup>
+          </select>
+          
+        <div class="form-row">
+          <input type="text" placeholder="地址" class="full-width" required>
+        </div>
+      </div>
+    </form>
+
+
+
+    <!-- 付款方式 -->
+    <fieldset class="payment-method">
+      <legend>付款方式</legend>
+      <label>
+        <input type="radio" name="paymentType" value="信用卡" required>
+        信用卡
+      </label>
+      <label>
+        <input type="radio" name="paymentType" value="銀行轉帳" >
+        銀行轉帳
+      </label>
+    </fieldset>
+
+    <!-- 立即下單按鈕 -->
+    <button class="order-button" onclick="goToPayment()">立即下單</button>
+  </main>
+
+  <footer>
+    <h3>ABOUT US</h3>
+    <p>在這裡，一起來場跨越時空的旅程，撥動時光的旋鈕，讓懷舊的旋律再起響起，讓舊時光的溫暖重回眼前。
+      時光不會重來，但故事能夠重現，讓我們一起倒帶時光，找回那些被遺忘的美好片段吧!
+    </p><hr>
+    <p class="reserved">Rewind Time 2024 reserved</p>
+  </footer>
+
+  <script src="js/dropdownList.js"></script>
+
+  <!-- JS: 切換宅配/超商欄位 & 導向不同付款頁面 -->
+  <script>
+    const shippingRadios = document.querySelectorAll('input[name="shippingType"]');
+    const homeDeliveryFields = document.querySelector('.home-delivery-fields');
+    const storePickupFields = document.querySelector('.store-pickup-fields');
+
+    shippingRadios.forEach(radio => {
+      radio.addEventListener('change', () => {
+        if (radio.value === '宅配') {
+          homeDeliveryFields.style.display = 'block';
+          storePickupFields.style.display = 'none';
+        } else {
+          homeDeliveryFields.style.display = 'none';
+          storePickupFields.style.display = 'block';
+        }
+      });
+    });
+
+    function goToPayment() {
+      // 根據使用者付款方式導向不同頁面 (範例)
+      const paymentChoice = document.querySelector('input[name="paymentType"]:checked').value;
+      if (paymentChoice === '信用卡') {
+        alert('即將跳轉至「付款成功」資訊頁面...');
+          window.location.href = 'payment-successful.html';
+      } else {
+        alert('即將跳轉至「付款成功」資訊頁面...');
+          window.location.href = 'payment-successful.html';
+      }
+    }
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>商品頁範例</title>
+  <!-- 將 interface.css 放在同資料夾或對應路徑 -->
+  <link rel="stylesheet" href="css/interface1.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-left">
+      <!-- 漢堡選單 -->
+      <div class="menu-container">
+        <div class="menu-icon"  id="menuIcon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="dropdown-list" id="dropdownList">
+          <li><a href="camera.html">底片相機</a></li>
+          <li><a href="dress.html">上衣</a></li>
+          <li><a href="pants.html">褲子</a></li>
+          <li><a href="accessories.html">飾品</a></li>
+        </ul>
+      </div>
+
+      <!-- Logo -->
+      <div class="logo">
+        <a href="index.html">
+        <img src="image/camera logo remove background.jpg" alt="RetroCam Logo" />
+        </a>
+      </div>
+    </div>
+
+    <div class="header-right">
+      <!-- 購物車圖示 -->
+      <div class="header-icons">
+        <a href="cart.html">
+        <span class="cart-icon">🛒</span>
+        </a>
+        <!-- 會員登入連結 -->
+        <a href="login.html" class="login-link">
+          <img src="image/member login.png" alt="會員登入">
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div id="notification" class="notification">商品已加入購物車！</div>
+
+  <main>
+    <!-- 搜尋欄 -->
+    <div class="search-bar">
+      <input type="text" placeholder="搜尋關鍵字">
+      <button>🔍</button>
+    </div>
+    <!-- 商品照片區 -->
+    <section class="product-photos">
+      <div class="product-photo">
+        <!-- 圖片容器：維持陰影/背景，而圖片自動縮放 -->
+        <div class="photo-placeholder">
+          <img src="image/camera1.jpg" alt="商品照片">
+        </div>
+      </div>
+      <!-- 照片切換 (示意 “< 1/4 >”) -->
+      <div class="photo-navigation">
+        <span class="prev">&lt;</span>
+        <span class="current">1/4</span>
+        <span class="next">&gt;</span>
+      </div>
+    </section>
+
+    <!-- 商品資訊 -->
+    <section class="product-info">
+      <h2>商品資訊</h2>
+      <!-- 商品介紹 -->
+      <div class="product-description">
+        <h3>相機規格：</h3>
+        <ul>
+          <li>電影格式：35mm (半框)</li>
+          <li>電影運輸：手動風倒</li>
+          <li>光學鏡片：22mm; F9.5</li>
+          <li>快門釋放：1 / 100s</li>
+          <li>閃光燈：內置</li>
+          <li>電源：1 * AAA 鹼性電池</li>
+          <li>尺寸：110 (寬) x 62 (高) x 39 (深) 毫米</li>
+          <li>重量：100 (克)</li>
+          <li>材料：ABS</li>
+        </ul>
+      </div>
+      <!-- 按鈕群 -->
+      <div class="button-group" data-id="set1" data-name="白色 Ektar H35 底片相機">
+        <button class="add-to-cart">加入購物車</button>
+        <a href="cart.html">
+          <button class="btn-buy">立即購買</button>
+        </a>
+      </div>
+    </section>
+    
+
+    <!-- 猜你也會喜歡 -->
+    <section class="recommend-section">
+      <h2>猜你也會喜歡</h2>
+      <div class="recommend-list">
+        <div class="recommend-item">
+          <img src="image/camera4.jpg" alt="推薦商品1">
+        </div>
+        <div class="recommend-item">
+          <img src="image/camera5.jpg" alt="推薦商品2">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <h3>ABOUT US</h3>
+    <p>在這裡，一起來場跨越時空的旅程，撥動時光的旋鈕，讓懷舊的旋律再起響起，讓舊時光的溫暖重回眼前。
+      時光不會重來，但故事能夠重現，讓我們一起倒帶時光，找回那些被遺忘的美好片段吧!
+    </p><hr>
+    <p class="reserved">Rewind Time 2024 reserved</p>
+  </footer>
+
+  <script src="js/dropdownList.js"></script>
+  <script src="js/products.js"></script>
+
+</body>
+</html>

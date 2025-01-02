@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>註冊成功</title>
+  <style>
+    @import url("./css/login-successful.css");
+  </style>
+</head>
+<body>
+
+  <!-- 模擬整個視窗(Modal) -->
+  <div class="success-container">
+    <!-- 關閉按鈕 -->
+    <span class="close-btn" onclick="closePopup()">X</span>
+    <!-- 標題 -->
+    <h2>註冊成功！</h2>
+    <!-- 內文提示 -->
+    <p>立即登入以繼續購物！</p>
+    <!-- 按鈕 -->
+    <button class="login-button" onclick="goToLogin()">返回首頁</button>
+  </div>
+
+  <script>
+    function closePopup() {
+      // 若需要關閉此視窗，可自行實作：移除容器或隱藏
+      document.querySelector('.success-container').style.display = 'none';
+    }
+    function goToLogin() {
+      // 導向登入頁
+      window.location.href = 'index.html';
+    }
+  </script>
+</body>
+</html>
+
